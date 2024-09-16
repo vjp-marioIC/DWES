@@ -10,9 +10,13 @@
     </head>
     <body>
         <?php
-            $nombre = $_GET['id'];
+            if (isset($_GET['id'])) {
+                $nombre = $_GET['id'];
 
-            echo $saludo . $nombre;
+                echo $saludo . $nombre;
+            } else {
+                echo 'Anónimo';
+            }  
         ?>
     </body>
 </html>
