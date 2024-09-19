@@ -8,10 +8,10 @@
         <?php
             $url = 'http://username:password@hostname:9090/path?arg=value#anchor';
         
-            echo (parse_url($url, PHP_URL_SCHEME)), "<br>";
-            echo (parse_url($url, PHP_URL_USER)), "<br>";
-            echo (parse_url($url, PHP_URL_PATH)), "<br>";
-            echo (parse_url($url, PHP_URL_QUERY));
+            echo "Protocolo: " . (parse_url($url, PHP_URL_SCHEME)), "<br>";
+            echo "Nombre usuario: " . (parse_url($url, PHP_URL_USER)), "<br>";
+            echo "Path: " . (parse_url($url, PHP_URL_PATH)), "<br>";
+            echo "QueryString: " . (parse_url($url, PHP_URL_QUERY));
         ?>
     </body>
 </html>

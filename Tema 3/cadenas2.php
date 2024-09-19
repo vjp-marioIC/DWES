@@ -14,15 +14,17 @@ $saludo = 'Hola ';
                 $nombre = $_GET['name'];
                 
                 //1
-                echo  $saludo. trim($nombre, '/'), "<br>";
+                echo  $saludo . trim($nombre, '/'), "<br>";
                 //2
-                echo strlen($nombre), "<br>";
+                echo "Longitud del nombre: " . strlen($nombre), "<br>";
                 //3
-                echo strtoupper($nombre), "<br>";
+                echo "Nombre en mayúsculas: " . strtoupper($nombre), "<br>";
                 //4
-                echo strtolower($nombre), "<br>";
+                echo "Nombre en minúsculas: " . strtolower($nombre), "<br>";
             } else {
-                echo $saludo . 'Mario';
+                $nombre = 'Mario';
+
+                echo $saludo . $nombre . "<br>";
             }
 
 
@@ -38,22 +40,24 @@ $saludo = 'Hola ';
                     echo "La cadena '$prefix' fue encontrada en la cadena '$nombre'", "<br>";
                 }
             } else {
-                echo "no existe ese parametro" , "<br>";
+                echo "No existe ese parametro" , "<br>";
             }
 
             //6
-            echo substr_count($nombre, "e"), "<br>";
+            echo "EL número de veces que aparece la letra 'e' es: " . substr_count($nombre, "e"), "<br>";
             //7
             $pos = stripos($nombre, 'a');
 
-            if ($nombre !== false) {
-                echo "Se encontró 'a' en '$nombre' en la posición $pos", "<br>";
+            if ($pos === false) {
+                echo "No se encontró la letra 'a' en '$nombre'", "<br>";
+            } else {
+                echo "La letra 'a' se encontró en '$nombre' en la posición $pos", "<br>";
             }
 
             //8
             $nombreSustituido = str_ireplace('o', '0', $nombre);
 
-            echo $nombreSustituido;
+            echo "El nombre sustituidao queda asi: " . $nombreSustituido;
         ?>
     </body>
 </html>

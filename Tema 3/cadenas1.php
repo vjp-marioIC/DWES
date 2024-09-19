@@ -15,7 +15,7 @@
     echo strtolower($nombre), "<br>";
 
     //6
-    echo substr_count($nombre, "A"), "<br>";
+    echo substr_count(strtolower($nombre), 'a'), "<br>";
 
     //7
     echo ord($nombre[0]), "<br>";
@@ -24,7 +24,7 @@
     // BUSCO LA PRIMERA POSCIÓN QUE CONTENGA UNA (A - a)
     $posicionPrimeraA = stripos($nombre, 'a');
 
-    //SI (posicionPrimeraA) = FALSE RETORNO -1, SI NO MUESTRO LA POSICIÓN
+    //SI (posicionPrimeraA) = FALSE MUESTRO -1, SI NO MUESTRO LA POSICIÓN
     if ($posicionPrimeraA === false) {
         echo -1;
     } else {
@@ -34,6 +34,7 @@
     echo "<br>";
     
     //9
+    // BUSCO LA ÚLTIMA POSCIÓN QUE CONTENGA UNA (A - a)
     $posicionUltimaA = strripos($nombre, 'a');
 
     //SI (posicionUltimaA) = FALSE RETORNO -1, SI NO MUESTRO LA POSICIÓN
