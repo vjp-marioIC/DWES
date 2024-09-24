@@ -10,14 +10,14 @@
     </head>
     <body>
         <?php
+            date_default_timezone_set('Europe/Madrid');
+
             // 1
             $fechaActual = new DateTime();
             echo "Fecha y hora actuales: " . $fechaActual->format('d-m-Y H:i:s') . "<br>";
      
             // 2
-            $zonaHoraria = new DateTimeZone('Europe/Madrid');
-            $fechaZonaHoraria = new DateTime('now', $zonaHoraria);
-            echo "Zona horaria: " . $fechaZonaHoraria->getTimezone()->getName() . "<br>";
+            echo "El nombre de la zona horaria es: " . date_default_timezone_get() . "<br>";
 
             // 3
             $fechaActualPara45Dias = new DateTime();
