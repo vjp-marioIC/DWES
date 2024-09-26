@@ -20,9 +20,10 @@
 
             //3
             $cadenaNombres = implode(' ', $nombres);
-            echo $cadenaNombres . "<br>";
+            echo "Nombres del array separados por espacios: " . $cadenaNombres . "<br>";
 
             //4
+            echo "Array ordenado alfabeticamente: ";
             $arryOrdenado = $nombres;  
             sort($arryOrdenado);
             print_r($arryOrdenado);
@@ -30,6 +31,7 @@
             echo "<br>";
             
             //5
+            echo "Array en orden inverso: ";
             $arrayInvertido = array_reverse($nombres);
             print_r($arrayInvertido);
 
@@ -45,14 +47,19 @@
             }
             
             //7
+            echo "Array ordenado aleatoriamente: ";
             $arrayAleatorio = $nombres;
             shuffle($arrayAleatorio);
             print_r($arrayAleatorio);
+
+            echo "<br>";
             
             //8
+            echo "Alumnos con al menos una a en el nombre: ";
+
             foreach ($nombres as $nombre) {
                 if (strpos($nombre, 'a') !== false) {
-                    echo $nombre . " ";
+                    echo  $nombre . " ";
                 }
             }
 
@@ -86,6 +93,7 @@
             echo "</table>";
 
             //11
+            echo "Nombres de alumnos: ";
             $arrySoloNombres = array_column($alumnos, 'nombre');
             print_r($arrySoloNombres);
 
