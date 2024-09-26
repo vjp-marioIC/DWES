@@ -2,6 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
+        <meta name="autor" content="Mario Iglesias Capa">
         <title>Funciones 3</title>
     </head>
     <body>

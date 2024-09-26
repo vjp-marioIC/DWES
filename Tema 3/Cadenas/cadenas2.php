@@ -6,6 +6,7 @@ $saludo = 'Hola ';
 <html lang="es">
     <head>
         <meta charset="utf-8">
+        <meta name="autor" content="Mario Iglesias Capa">
         <title>Cadenas 2</title>
     </head>
     <body>
@@ -27,8 +28,7 @@ $saludo = 'Hola ';
                 echo $saludo . $nombre . "<br>";
             }
 
-
-            //5 Dsitinguir entre mayusculas y minusculas
+            //5
             if (isset($_GET['prefix'])) {
                 $prefix = $_GET['prefix'];
 
@@ -57,7 +57,7 @@ $saludo = 'Hola ';
             //8
             $nombreSustituido = str_ireplace('o', '0', $nombre);
 
-            echo "El nombre sustituidao queda asi: " . $nombreSustituido;
+            echo "El nombre sustituido queda asi: " . $nombreSustituido;
         ?>
     </body>
 </html>

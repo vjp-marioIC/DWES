@@ -2,6 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
+        <meta name="autor" content="Mario Iglesias Capa">
         <title>Arrays 2</title>
         <style>
             table {

@@ -6,10 +6,12 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
+        <meta name="autor" content="Mario Iglesias Capa">
         <title>Fechas 1</title>
     </head>
     <body>
         <?php
+            // DEFINO LA ZONA HORARIA A ('Europe/Madrid') 
             date_default_timezone_set('Europe/Madrid');
 
             // 1
