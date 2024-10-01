@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Prueba</title>
+        <title>Prueba 2</title>
     </head>
     <body>
        <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
