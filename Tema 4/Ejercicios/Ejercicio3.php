@@ -24,9 +24,7 @@
 
                 $fechaConvertida = strtotime($fecha);
 
-                $fechaGenerada = date('d/m/Y', $fechaConvertida);
-                $fechaGenerada = new DateTime();
-
+                $fechaGenerada = new DateTime($fecha);
                 $fechaDentroDeXDias = $fechaGenerada->add(new DateInterval('P' . $numDias . 'D'));
 
                 echo "La fecha seleccionada es: " . $fecha . "<br>";
