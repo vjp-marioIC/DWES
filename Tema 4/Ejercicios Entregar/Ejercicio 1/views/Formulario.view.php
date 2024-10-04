@@ -22,7 +22,7 @@
         </style>
     </head>
     <body>
-        <h1>Búesqueda de canciones</h1>
+        <h1>Búsqueda de canciones</h1>
 
        <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
             <label for="textoBuscar">Texto a buscar: </label>
@@ -59,23 +59,27 @@
        </form>
 
        <?php
-            echo "<br>";
-            echo "<table>";
-            echo "<tr>
-                        <th>Titulo</th>
-                        <th>Álbum</th>
-                        <th>Género</th> 
-                </tr>";
-
-            foreach ($canciones as $cancion) {
+            if (!empty($canciones)) {
+                echo "<br>";
+                echo "<table>";
                 echo "<tr>
-                            <td>{$cancion['titulo']}</td>
-                            <td>{$cancion['album']}</td>
-                            <td>{$cancion['genero']}</td>
+                            <th>Titulo</th>
+                            <th>Álbum</th>
+                            <th>Género</th> 
                     </tr>";
-            }
 
-            echo "</table>";
+                foreach ($canciones as $cancion) {
+                    echo "<tr>
+                                <td>{$cancion['titulo']}</td>
+                                <td>{$cancion['album']}</td>
+                                <td>{$cancion['genero']}</td>
+                        </tr>";
+                }
+
+                echo "</table>";
+            } else {
+                echo "<p>No se encontraron canciones.</p>";
+            }
         ?>
     </body>
 </html>
