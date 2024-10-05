@@ -78,7 +78,7 @@
 
                 echo "</table>";
             } else {
-                echo "<p>No se encontraron canciones.</p>";
+                echo "No se ha encontrado ninguna canción";
             }
         ?>
     </body>
