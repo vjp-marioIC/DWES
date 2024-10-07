@@ -2,24 +2,8 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" src="../css/style.css">
+        <link rel="stylesheet" href="css/style.css">
         <title>Formulario</title>
-
-        <style>
-            table {
-                border: 1px solid black;
-            }
-
-            table tr th {
-                border: 1px solid black;
-                padding: 5px;
-            }
-
-            table tr td {
-                border: 1px solid black;
-                padding: 5px;
-            }
-        </style>
     </head>
     <body>
         <h1>Búsqueda de canciones</h1>
