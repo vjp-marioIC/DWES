@@ -43,6 +43,7 @@
        </form>
 
        <?php
+            // SI EL ARRAY DE CANCIONES NO ESTÁ VACIO LO MUESTRO EN LA TABLA
             if (!empty($canciones)) {
                 echo "<br>";
                 echo "<table>";
