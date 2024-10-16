@@ -77,14 +77,20 @@
         //MÉTODO (toString)
         public function __toString()
         {
-            return "Contacto ". $this->id .
+            $cadena =  "Contacto ". $this->id .
                    ": <br> ---------------------------------------------------" .
                    "<br> Nombre: " .  $this->nombre .
                    "<br> Teléfono: " . $this->telefono .
                    "<br> Fecha de Alta: " . $this->fechaAlta->format('Y-m-d H:i:s') .
-                   "<br> Foto: " . $this->foto .
-                   " <a href=\"../views/vercontacto.view.php?id=" . $this->id . "\">Ver contacto</a>";
+                   "<br> Foto: " . $this->foto;
 
+            if (str_contains($_SERVER["REQUEST_URI"], 'vercontacto.view')) {
+                $cadena = $cadena . "<br>";
+            } else {
+                $cadena = $cadena . " <a href=\"../views/vercontacto.view.php?id=" . $this->id-1 . "\">Ver contacto</a>" . "<br> <br>";
+            }
+
+            return $cadena;
         }
     }
 ?>

@@ -7,9 +7,12 @@
         private array $arrayContactos;
 
         //CONSTRUCTOR PARAMETRIZADO
-        public function __construct(string $nombre, $contacto) {
+        public function __construct(string $nombre) {
             $this->nombre = $nombre;
-            $this->arrayContactos[] = $contacto;
+            $this->arrayContactos = [ new Contacto(1, 'Juan', '123-456-7890', new DateTime(), 'foto1.jpg'),
+                                        new Contacto(2, 'María', '987-654-3210', new DateTime(), 'foto2.jpg'),
+                                        new Contacto(3, 'Pedro', '555-555-5555', new DateTime(), 'foto3.jpg')
+                                        ];
         }
 
         //GETTERS Y SETTERS
@@ -64,19 +67,16 @@
 
         //MÉTODO (toString)
         public function __toString() {
-            
-            $agendaYcontactos = [];
 
             // TÍTULO DE LA AGENDA
-            $agendaYcontactos[] = "<h1>" . $this->nombre . "</h1>";
+            $cadena = "<h1>" . $this->nombre . "</h1>";
 
             // AGREGO CADA UNO DE LOS CONTACTOS A LA AGENDA
             foreach ($this->arrayContactos as $contacto) {
-                $agendaYcontactos[] = "<p>" . $contacto . "</p>";
+                $cadena = $cadena . $contacto;
             }
 
-            // JUNTO EL TITULO DE LA AGENDA CON LOS CONTACTOS
-            return implode('', $agendaYcontactos);
+            return $cadena;
         }
     }
 ?>
