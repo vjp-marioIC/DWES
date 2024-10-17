@@ -43,19 +43,20 @@
         }
 
         //MÉTODO CLONAR
-        /*
         public function __clone() {
-            $clon = new EContacto($this->email, $this->url);
+            $clonPadre = parent::__clone();
 
-            return $clon;
-        }*/
+            $clonPadre = $clonPadre . $this->email, $this->url;
+
+            return $clonPadre;
+        }
 
         //MÉTODO (toString)
         public function __toString()
         {
             $cadena = parent::__toString();
 
-            $cadena = $cadena . "Emial: ". $this->email ." Url: " .  $this->url;
+            $cadena = $cadena . " Emial: ". $this->email ." Url: " .  $this->url;
 
             return $cadena;
         }

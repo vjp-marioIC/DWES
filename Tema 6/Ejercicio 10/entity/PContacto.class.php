@@ -57,21 +57,20 @@
         }
 
         //MÉTODO CLONAR
-        /*
         public function __clone() {
-            $cadena = parent::__clone();
+            $clonPadre = parent::__clone();
 
-            $clon = new PContacto($this->direccion, $this->ciudad, $this->provincia);
+            $clonPadre = clonPadre . $this->direccion, $this->ciudad, $this->provincia;
 
-            return $clon;
-        }*/
+            return $clonPadre;
+        }
 
         //MÉTODO (toString)
         public function __toString()
         {
             $cadena = parent::__toString();
 
-            $cadena = $cadena . "Dirección: ". $this->direccion ." Ciudad: " .  $this->ciudad . " Provincia: " . $this->provincia;
+            $cadena = $cadena . " Dirección: ". $this->direccion ." Ciudad: " .  $this->ciudad . " Provincia: " . $this->provincia;
 
             return $cadena;
         }
