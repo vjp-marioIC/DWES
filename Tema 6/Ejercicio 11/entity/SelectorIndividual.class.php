@@ -1,38 +1,41 @@
 <?php
-    abstract class SelectorIndividual implements SelectorIndividual {
+    require_once 'ISelectorIndividual.class.php';
+
+    abstract class SelectorIndividual implements ISelectorIndividual {
         //ATRIBUTOS
-        private string $tituloCampo;
-        private string $nombreCampo;
-        private array $valores;
-        private int $elementoSeleccionado;
+        protected $tituloCampo;
+        protected $nombreCampo;
+        protected array $valores;
+        protected $elementoSeleccionado;
 
         //CONSTRUCTOR PARAMETRIZADO
-        public function __construct(string $tituloCampo, string $nombreCampo, $valores, int $elementoSeleccionado) {
+        public function __construct($tituloCampo, $nombreCampo, $valores, $elementoSeleccionado)
+        {
             $this->tituloCampo = $tituloCampo;
             $this->nombreCampo = $nombreCampo;
-            $this->valores[] = $valores;
+            $this->valores = $valores;
             $this->elementoSeleccionado = $elementoSeleccionado;
         }
 
         //GETTERS Y SETTERS
-        public function getTituloCampo(): string
+        public function getTituloCampo(): null
         {
             return $this->tituloCampo;
         }
 
-        public function setTituloCampo(string $tituloCampo): self
+        public function setTituloCampo(null$tituloCampo): self
         {
             $this->tituloCampo = $tituloCampo;
 
             return $this;
         }
 
-        public function getNombreCampo(): string
+        public function getNombreCampo(): null
         {
             return $this->nombreCampo;
         }
 
-        public function setNombreCampo(string $nombreCampo): self
+        public function setNombreCampo(null$nombreCampo): self
         {
             $this->nombreCampo = $nombreCampo;
 
@@ -51,12 +54,12 @@
             return $this;
         }
 
-        public function getElementoSeleccionado(): int
+        public function getElementoSeleccionado(): null
         {
             return $this->elementoSeleccionado;
         }
 
-        public function setElementoSeleccionado(int $elementoSeleccionado): self
+        public function setElementoSeleccionado(null$elementoSeleccionado): self
         {
             $this->elementoSeleccionado = $elementoSeleccionado;
 
@@ -64,11 +67,6 @@
         }
 
         // MÉTODO GENERAR SELECTOR
-        abstract public function genereSelector();
-
-        //MÉTODO (toString)
-        public function __toString() {
-            
-        }
+        abstract public function generaSelector();
     }
 ?>

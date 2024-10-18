@@ -1,7 +1,9 @@
 <?php
-    interface SelectorIndividual {
+    interface ISelectorIndividual {
         //CONSTRUCTOR PARAMETRIZADO
-        public function __construct(string $tituloCampo, string $nombreCampo, $valores, int $elementoSeleccionado);
-        public function genereSelector();
+        public function __construct($tituloCampo, $nombreCampo, $valores, $elementoSeleccionado);
+
+        // MÉTODO GENERAR SELECTOR
+        public function generaSelector();
     }
 ?>
