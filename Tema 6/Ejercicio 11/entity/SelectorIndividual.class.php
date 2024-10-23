@@ -18,28 +18,24 @@
         }
 
         //GETTERS Y SETTERS
-        public function getTituloCampo(): null
+        public function getTituloCampo(): string
         {
             return $this->tituloCampo;
         }
 
-        public function setTituloCampo(null$tituloCampo): self
+        public function setTituloCampo(string $tituloCampo): void
         {
             $this->tituloCampo = $tituloCampo;
-
-            return $this;
         }
 
-        public function getNombreCampo(): null
+        public function getNombreCampo(): string
         {
             return $this->nombreCampo;
         }
 
-        public function setNombreCampo(null$nombreCampo): self
+        public function setNombreCampo(string $nombreCampo): void
         {
             $this->nombreCampo = $nombreCampo;
-
-            return $this;
         }
 
         public function getValores()
@@ -54,16 +50,14 @@
             return $this;
         }
 
-        public function getElementoSeleccionado(): null
+        public function getElementoSeleccionado(): int
         {
             return $this->elementoSeleccionado;
         }
 
-        public function setElementoSeleccionado(null$elementoSeleccionado): self
+        public function setElementoSeleccionado(int $elementoSeleccionado): void
         {
             $this->elementoSeleccionado = $elementoSeleccionado;
-
-            return $this;
         }
 
         // MÉTODO GENERAR SELECTOR
